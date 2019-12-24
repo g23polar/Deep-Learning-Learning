@@ -1,12 +1,14 @@
 import cv2
 from glob import glob
 
-shop_images = glob('/Users/gaut/Desktop/General/CS/py/py/DeepLearning/face_images/*.jpg')
+shop_images = glob('PATH_TO_IMAGES_*.jpg')
+
 """
 Detects faces using OpenCV
 """
 def detectFaces(pics):
     cnt = 0
+    # keep haarcascade raw file in curr directory 
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
     for picture in shop_images:
         cnt += 1
