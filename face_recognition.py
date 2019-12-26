@@ -1,5 +1,6 @@
 """
 face detection using face_recognition library
+Sys req: CMake, dlib, face_recogntion, PIL
 """
 def faceDetect(pics):
     for picture in pics:
@@ -9,7 +10,6 @@ def faceDetect(pics):
         # This method is more accurate than the default HOG model, but it's slower
         # unless you have an nvidia GPU and dlib compiled with CUDA extensions. But if you do,
         # this will use GPU acceleration and perform well.
-        # See also: find_faces_in_picture.py
         face_locations = face_recognition.face_locations(image, number_of_times_to_upsample=0, model="cnn")
 
         print("I found {} face(s) in this photograph.".format(len(face_locations)))
